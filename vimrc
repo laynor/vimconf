@@ -19,6 +19,7 @@ Bundle 'inkpot'
 Bundle 'taglist.vim'
 
 " Include my bundles here
+set rtp+=~/.vim/after
 
 filetype plugin indent on
 " powerline
@@ -30,8 +31,11 @@ elseif s:host == 'shark.tekno-soft.it'
 endif
 
 set laststatus=2
+
+
 nmap du :wincmd w<cr>:normal u<cr>:wincmd w<cr>
 
 autocmd BufWritePost *.c :TlistUpdate
 autocmd BufWritePost *.cpp :TlistUpdate
 autocmd BufWritePost *.h :TlistUpdate
+

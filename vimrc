@@ -23,7 +23,7 @@ set rtp+=~/.vim/after
 
 filetype plugin indent on
 " powerline
-let s:host = $HOSTNAME
+let s:host = hostname()
 if s:host == 'pignegna'
 	set rtp+=~/.local/lib/python3.3/site-packages/powerline/bindings/vim
 elseif s:host == 'shark.tekno-soft.it'

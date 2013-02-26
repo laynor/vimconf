@@ -17,6 +17,8 @@ Bundle 'Vimacs'
 Bundle 'Gundo'
 Bundle 'inkpot'
 Bundle 'taglist.vim'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 
 " Include my bundles here
 set rtp+=~/.vim/after
@@ -34,7 +36,8 @@ set laststatus=2
 
 
 nmap du :wincmd w<cr>:normal u<cr>:wincmd w<cr>
-
+noremap <C-X><C-F> :FufFile<CR>
+noremap! <C-G> <C-c>
 autocmd BufWritePost *.c :TlistUpdate
 autocmd BufWritePost *.cpp :TlistUpdate
 autocmd BufWritePost *.h :TlistUpdate

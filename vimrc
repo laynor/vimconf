@@ -19,6 +19,9 @@ Bundle 'inkpot'
 Bundle 'taglist.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'The-NERD-tree'
+Bundle 'molokai'
+Bundle 'The-NERD-Commenter'
 
 " Include my bundles here
 set rtp+=~/.vim/after
@@ -27,17 +30,45 @@ filetype plugin indent on
 " powerline
 let s:host = hostname()
 if s:host == 'pignegna'
-	set rtp+=~/.local/lib/python3.3/site-packages/powerline/bindings/vim
+    set rtp+=~/.local/lib/python3.3/site-packages/powerline/bindings/vim
 elseif s:host == 'shark.tekno-soft.it'
-	set rtp+=/home/alessandro/.local/lib/python2.7/site-packages/powerline/bindings/vim
+    set rtp+=/home/alessandro/.local/lib/python2.7/site-packages/powerline/bindings/vim
 endif
-
 set laststatus=2
 
+""" META/ESC issue
+"let c='a'
+"while c <= 'z'
+"  exec "set <A-".c.">=\e".c
+"  exec "imap \e".c." <A-".c.">"
+"  let c = nr2char(1+char2nr(c))
+"endw
+"
+"set timeout ttimeoutlen=50
 
+""" TAB AS SPACES
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+colorscheme inkpot
 nmap du :wincmd w<cr>:normal u<cr>:wincmd w<cr>
+
+""" FuzzyFinder
 noremap <C-X><C-F> :FufFile<CR>
 noremap! <C-G> <C-c>
+
+""" NERDTree
+nmap <C-D> :NERDTreeToggle<CR>
+
+""" NERDCommenter
+vmap <leader>; <Plug>NERDCommenterToggle
+vmap <M-;> <Plug>NERDCommenterToggle
+
+if has("unix") && !has("gui_running")
+    set <M-;>=;
+endif
+""" Taglist
 autocmd BufWritePost *.c :TlistUpdate
 autocmd BufWritePost *.cpp :TlistUpdate
 autocmd BufWritePost *.h :TlistUpdate

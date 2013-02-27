@@ -22,6 +22,7 @@ Bundle 'FuzzyFinder'
 Bundle 'The-NERD-tree'
 Bundle 'molokai'
 Bundle 'The-NERD-Commenter'
+Bundle 'surround.vim'
 
 " Include my bundles here
 set rtp+=~/.vim/after

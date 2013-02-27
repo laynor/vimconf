@@ -6,6 +6,7 @@ set number
 """ Autoindent
 set autoindent
 set copyindent
+set smartindent
 
 
 """ Vundle
@@ -73,4 +74,30 @@ endif
 autocmd BufWritePost *.c :TlistUpdate
 autocmd BufWritePost *.cpp :TlistUpdate
 autocmd BufWritePost *.h :TlistUpdate
+
+"""" Wild
+set wildmenu
+set ignorecase
+set smartcase
+
+""" search
+set hlsearch
+set incsearch
+
+""" parenmatch
+set showmatch
+
+""" scrolling
+set scrolloff=4
+
+""" Trailing whitespace
+
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd FileType c,cpp,java,php,ruby,python,vim autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 

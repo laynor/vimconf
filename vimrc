@@ -24,6 +24,8 @@ Bundle 'The-NERD-tree'
 Bundle 'molokai'
 Bundle 'The-NERD-Commenter'
 Bundle 'surround.vim'
+Bundle 'SWIG-syntax'
+" Bundle 'OmniCppComplete'
 
 " Include my bundles here
 set rtp+=~/.vim/after
@@ -50,7 +52,6 @@ set laststatus=2
 
 """ TAB AS SPACES
 set expandtab
-set tabstop=4
 set shiftwidth=4
 
 colorscheme inkpot
@@ -100,4 +101,4 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd FileType c,cpp,java,php,ruby,python,vim autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-
+autocmd BufNewFile,BufRead *.i set filetype=swig

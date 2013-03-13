@@ -54,6 +54,7 @@ set laststatus=2
 set expandtab
 set shiftwidth=4
 
+let g:inkpot_black_background=1
 colorscheme inkpot
 nmap du :wincmd w<cr>:normal u<cr>:wincmd w<cr>
 

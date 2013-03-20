@@ -25,6 +25,8 @@ Bundle 'molokai'
 Bundle 'The-NERD-Commenter'
 Bundle 'surround.vim'
 Bundle 'SWIG-syntax'
+Bundle 'luarefvim'
+Bundle 'lua.vim'
 " Bundle 'OmniCppComplete'
 
 " Include my bundles here

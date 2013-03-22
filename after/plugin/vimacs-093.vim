@@ -3,3 +3,7 @@ unmap! <C-c>
 unmap! <C-v>
 unmap! <C-p>
 unmap! <C-n>
+iunmap <C-u>
+iunmap <C-x>
+iunmap <C-x><C-o>
+iunmap <C-x><C-u>

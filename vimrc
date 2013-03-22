@@ -8,9 +8,12 @@ set autoindent
 set copyindent
 set smartindent
 
+let g:EclimHome = '/home/ale/.eclipse/org.eclipse.platform_4.2.0_1543616141/plugins/org.eclim_2.2.5'
+let g:EclimEclipseHome = '/usr/share/eclipse'
 
-""" Vundle
-filetype off " required for vundle
+"" Vundle
+" filetype off " required for vundle
+filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'gmarik/vundle'
@@ -27,6 +30,11 @@ Bundle 'surround.vim'
 Bundle 'SWIG-syntax'
 Bundle 'Gist.vim'
 Bundle 'WebAPI.vim'
+Bundle 'luarefvim'
+Bundle 'lua.vim'
+" Bundle 'jamesinchina/eclim-vundle'
+Bundle 'johnliu/eclim.vim'
+filetype plugin on
 " Bundle 'OmniCppComplete'
 
 " Include my bundles here
@@ -61,7 +69,7 @@ colorscheme inkpot
 nmap du :wincmd w<cr>:normal u<cr>:wincmd w<cr>
 
 """ FuzzyFinder
-noremap <C-X><C-F> :FufFile<CR>
+" noremap <C-X><C-F> :FufFile<CR>
 noremap! <C-G> <C-c>
 
 """ NERDTree
